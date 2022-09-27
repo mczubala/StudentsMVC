@@ -1,0 +1,17 @@
+﻿@model IEnumerable<StudentsMVC.Data.Models.Student>
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Students MVC</h1>
+    <div>
+        There are @Enumerable.Count(Model) Students in the db. 
+    </div>
+    <ul>
+        @foreach (var student in Model)
+        {
+            <li>@student.FirstName, @student.LastName</li>
+        }
+    </ul>
+</div>
